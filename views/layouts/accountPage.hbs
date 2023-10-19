@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+</head>
+<body>
+    {{!-- account info --}}
+    {{!-- <p>{{user}}</p> --}}
+
+    <div class="info">
+        <p>Name: {{name}}</p>
+        <p>Email: {{email}}</p>
+        <p>Phone No.: {{phone}}</p>
+        {{!-- {{friends}}
+        {{isFriend}}
+        {{isRequestSent}} --}}
+
+        {{#if isFriend}}
+        
+            <p>You both are already friends. Start a conversation from home page...</p>
+        
+        {{else if isRequestSent}}
+
+            <p>You have already sent a request. Start a conversation once the request is accepted...</p>
+        
+        {{else if isRequestReceived}}
+
+            <p>You have already received a request. Start a conversation after accepting the request on Pending Requests Page...</p>
+        
+        {{else}}
+
+            <form action="/send_request/{{id}}" method="post">
+                <input type="submit" id="sendRequestBtn" value="Send Request">
+            </form>
+
+        {{/if}}
+    </div>
+</body>
+</html>

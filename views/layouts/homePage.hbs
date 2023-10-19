@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>My Chat App</title>
+</head>
+<body>
+    <form action="/users/logout" method="post">
+        <button>Logout</button>
+    </form>
+
+    <a href="/search"> <input type="button" value="Search"> </a>
+    <br>
+
+    <a href="/pending-requests"> <input type="button" value="Pending Requests"> </a>
+    <br>
+
+    {{#each friends}}
+
+        {{name}}
+        {{email}}
+        <a href="/chat/{{id}}"><input type="button" value="Chat"></a>
+        <br>
+
+    {{/each}}
+
+    {{!-- <form action="">
+        <input type="text" id="msg">
+        <input type="button" value="Send" id="sendBtn" onclick="sendMsg()">
+    </form>
+    
+    <div id="msgPage">
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script> --}}
+</body>
+</html>

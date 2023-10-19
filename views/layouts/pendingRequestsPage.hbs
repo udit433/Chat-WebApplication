@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Rquests</title>
+</head>
+<body>
+    <h3>Pending Requests</h3>
+
+    {{#each arr}}
+
+        {{name}}
+        {{email}}
+
+        <form action="/accept-request/{{id}}" method="post">
+            <input type="submit" id="AcceptBtn" value="Accept">
+        </form>
+
+        <form action="/decline-request/{{id}}" method="post">
+            <input type="submit" id="DeclineBtn" value="Decline">
+        </form>
+
+    {{/each}}
+</body>
+</html>

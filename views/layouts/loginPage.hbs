@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h3>Login Page</h3>
+
+    <form action="/users/login" method="post">
+        <input type="text" id="email" name="email" placeholder="Enter Email Id...">
+        <input type="text" id="password" name="password" placeholder="Enter Password...">
+        <input type="submit" value="Send">
+    </form>
+
+    <a href="/users/login"> <input type="button" value="Login Page"> </a>
+    <a href="/users/signup"> <input type="button" value="Signup Page"> </a>
+
+    <p style="color: red;">{{note}}</p>
+    {{!-- <div id="note"></div> --}}
+
+    <!-- <script src="../routers/userRouter.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+</head>
+<body>
+    <h3>SignUp Page</h3>
+
+    <form action="/users/signup" method="post">
+        <input type="text" name="name" id="name" placeholder="Enter your Name...">
+        <input type="text" name="email" id="email" placeholder="Enter your Email Id...">
+        <input type="text" name="phone" id="phone" placeholder="Enter your Phone No.">
+        <input type="text" name="password" id="password" placeholder="Enter Password...">
+        <input type="submit" value="Save">
+
+        <p style="color: red;">{{note}}</p>
+    </form>
+
+    <a href="/users/login"> <input type="button" value="Login Page"> </a>
+    <a href="/users/signup"> <input type="button" value="Signup Page"> </a>
+
+</body>
+</html>
